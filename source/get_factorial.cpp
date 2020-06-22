@@ -1,6 +1,6 @@
 int factorial (int x)
 {
-    std::cout << "factorial(" << x << ") is called\n";
+    std::cout << "factorial(" << x << ") is called" << std::endl;
     int result;
     if (x == 0)
     {
@@ -11,7 +11,7 @@ int factorial (int x)
         result = factorial(x - 1) * x;
     }
 
-    std::cout << "factorial(" << x << ") is exit\n";
+    std::cout << "factorial(" << x << ") is exit" << std::endl;
 
     return result;
 }

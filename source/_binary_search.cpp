@@ -1,8 +1,9 @@
 void _binary_search(int64_t n, int64_t k)
 {
-    if (((0 < n) && (n < k)) || ((k < 0) && (0 < n)) || (((0 > n) && (n > k)) || ((k > 0) && (0 > n))))
+    if (((0 < n) && (n < k)) || ((k < 0) && (0 < n)) || (((0 > n) && (n > k)) \
+        || ((k > 0) && (0 > n))))
     {
-        std::cout << "Number given to find is out of range!\n" << std::endl;
+        std::cout << "Number given to find is out of range!" << std::endl;
         return;
     }
     int64_t* a;
@@ -49,7 +50,8 @@ void _binary_search(int64_t n, int64_t k)
 
         if (a[middle] == k)
         {
-            std::cout << "\n The number " << a[middle] << " is find at index: " << middle << std::endl;
+            std::cout << "\n The number " << a[middle] << " is find at index: " \
+                        << middle << std::endl;
             break;
         }
         else if (a[middle] < k)
@@ -69,7 +71,7 @@ void _binary_search(int64_t n, int64_t k)
 
         if (a_start > a_end)
         {
-            std::cout << "\n Number is not found!\n" << std::endl;
+            std::cout << std::endl << "Number is not found!" << std::endl;
             break;
         }
     }

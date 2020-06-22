@@ -51,9 +51,7 @@ void bin_digits_generator(int left_bin_digits_to_generate)
     {
         for (int i = 0; i < top; i++)
 
-            std::cout << bin_digits_combination[i];
-
-        std::cout << std::endl;
+            std::cout << bin_digits_combination[i] << std::endl;
     }
     else
     {
