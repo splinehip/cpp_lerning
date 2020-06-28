@@ -22,7 +22,8 @@ int main (int argc, char* argv[])
                   <<" -f   --- Get factorial" << std::endl \
                   <<" -ll  --- Linked list" << std::endl \
                   <<" -ss  --- Selection sorter" << std::endl \
-                  <<" -slr --- Sum numbers in array" << std::endl << std::endl \
+                  <<" -slr --- Sum, quantity, biggest numbers in array" \
+                  << std::endl << std::endl \
                   <<" For help -h, --help, ?" << std::endl << std::endl;
     }
     else if (argv[1] == std::string("-bs"))
@@ -106,9 +107,11 @@ int main (int argc, char* argv[])
     }
     else if (argv[1] == std::string("-slr"))
     {
-        int numbers_of_element = sum(get_slr_param());
-        std::cout << "Summ of array elements equally: " << numbers_of_element \
-                  << std::endl << std::endl;
+        std::vector<int> v;
+        int var;
+        std::tie(v, var) = get_slr_param();
+        int result = sum(v, var);
+        std::cout << "Result equally: " << result << std::endl << std::endl;
     }
     else if (argv[1] == std::string("-h") || argv[1] == std::string("--help") \
                 ||  argv[1] == std::string("?"))
@@ -127,9 +130,9 @@ int main (int argc, char* argv[])
                   <<" -ss  --- Generate integers numbers array, fil it of random values "\
                     <<"in range 0 - 10.000, then sorting it using \"selection sort\"." \
                     << std::endl \
-                  <<" -slr --- Generating vector array of n length and fill it of " \
-                    <<"random generated nambers. Getting sum of numbers using recursion."\
-                    << std::endl << std::endl \
+                  <<" -slr --- Generate vector array of n length and fill it of " \
+                    <<"random generated nambers. Getting sum, quantity or biggest of " \
+                    <<"numbers using recursion." << std::endl << std::endl \
                   <<" For this help -h, --help, ?" << std::endl << std::endl;
     }
     else
@@ -143,7 +146,8 @@ int main (int argc, char* argv[])
                   <<" -f   --- Get factorial" << std::endl \
                   <<" -ll  --- Linked list" << std::endl \
                   <<" -ss  --- Selection sorter" << std::endl << std::endl \
-                  <<" -slr --- Sum numbers in array" << std::endl << std::endl \
+                  <<" -slr --- Sum, quantity, biggest numbers in array" \
+                  << std::endl << std::endl \
                   <<" For help -h, --help, ?" << std::endl << std::endl;
     }
 
